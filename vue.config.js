@@ -17,6 +17,14 @@ module.exports = {
             // new BundleAnalyzerPlugin(),
             new webpack.BannerPlugin(banner)
         ],
+        externals: {
+            vue: {
+                commonjs: 'vue',
+                commonjs2: 'vue',
+                root: 'Vue',
+                amd: 'vue'
+            }
+        }
     },
     css: {
         extract: false
